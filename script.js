@@ -9,18 +9,14 @@ buttons.forEach((elem) => {
 
 const f = (event) => {
     let buttonValue = event.currentTarget.innerText;
-    if (!(buttonValue === "Calculate")) {
-        input.value += buttonValue;
-    } else {
-        calculate(input.value);
-    }
+    buttonValue === "Calculate" ? calculate(input.value) : input.value += buttonValue;
 };
 
 function calculate(expression) {
-    console.log(expression);
-    parseExpression(expression);
+    let parsedExpression = parseExpression(expression);
+    console.log(countExpression(parsedExpression));
 }
 
 function parseExpression(expression) {
-    let regex = ;
+    return expression.split("");
 }
