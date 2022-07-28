@@ -56,3 +56,7 @@ function parseExpression(expression) {
     });
     return answer;
 }
+
+function clearInput() {
+    input.value = "";
+}

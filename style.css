@@ -26,6 +26,10 @@ body, html {
 .inputBar {
     margin: 2px 0 20px 0;
     width: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 5px 24px 1px rgba(27, 151, 186, 0.98);
+    border-radius: 50px;
 }
 .calcInput {
     width: 100%;
@@ -33,10 +37,26 @@ body, html {
     color: #fff;
     border: 1px solid;
     border-radius: 50px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
     padding: 0 10px;
     height: 30px;
     font-size: 20px;
-    box-shadow: 0px 5px 24px 1px rgba(27, 151, 186, 0.98);
+}
+.calcInput:focus {
+    outline: none;
+}
+.clearButton {
+    width: 10%;
+    height: 30px;
+    padding-right: 4px;
+    background-color: #d4d13b00;
+    color: #fff;
+    border: 1px solid;
+    border-radius: 50px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 .buttonsContainer {
     width: 100%;
