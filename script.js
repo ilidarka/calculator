@@ -36,7 +36,8 @@ function calculate(expression) {
 }
 
 function findBrackets(expression) {
-    let parsingResult = String(expression).match(/\((\d*.\d*)\)/);
+    let pattern = new RegExp(/\((\d*.\d*)\)/);
+    let parsingResult = String(expression).match(pattern);
     if (parsingResult) {
         return parseExpression(String(expression).replace(/\((\d*.\d*)\)/, parseExpression(parsingResult[1])));
     } else {
@@ -45,7 +46,8 @@ function findBrackets(expression) {
 }
 
 function parseExpression(expression) {
-    let parsedExpression = expression.split("");
+    let pattern = new RegExp(/\d+|./, "g");
+    let parsedExpression = expression.match(pattern);
     let answer;
     Object.keys(actions).map((action) => {
         if (String(parsedExpression[1]) === actions[action].value) {

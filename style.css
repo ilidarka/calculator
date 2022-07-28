@@ -20,6 +20,8 @@ body, html {
     flex-direction: column;
     border-radius: 10px;
     padding: 6px;
+    background-image: url("background-image.jpg");
+    background-size: contain;
 }
 .inputBar {
     margin: 2px 0 20px 0;
@@ -27,12 +29,14 @@ body, html {
 }
 .calcInput {
     width: 100%;
-    background-color: #d4d13b;
+    background-color: #d4d13b00;
+    color: #fff;
     border: 1px solid;
     border-radius: 50px;
     padding: 0 10px;
     height: 30px;
     font-size: 20px;
+    box-shadow: 0px 5px 24px 1px rgba(27, 151, 186, 0.98);
 }
 .buttonsContainer {
     width: 100%;
@@ -53,9 +57,18 @@ body, html {
     border: 1px solid;
     border-radius: 5px;
     width: 40px;
-    background-color: #d4d13b;
+    background-color: #d4d13b00;
     text-align: center;
     font-size: 14px;
+    color: #fff;
+    box-shadow: 0px 5px 24px 1px rgba(27, 151, 186, 0.98);
+    cursor: pointer;
+}
+.buttons:hover {
+    background-color: #7f0a8770;
+}
+.buttons:active {
+    transform: scale(0.9);
 }
 .calcButton {
     width: 85px;
